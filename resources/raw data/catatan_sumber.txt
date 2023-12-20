@@ -1,1 +1,2 @@
 1. dataset daftar harga rumah, link = https://www.kaggle.com/datasets/wisnuanggara/daftar-harga-rumah
+2. dataset cuaca jabodetabek = https://data.bmkg.go.id/csv/
