@@ -1,3 +1,4 @@
 1. dataset daftar harga rumah, link = https://www.kaggle.com/datasets/wisnuanggara/daftar-harga-rumah
 2. dataset cuaca jabodetabek = https://data.bmkg.go.id/csv/
 3. dataset daftar harga rumah seken = https://databoks.katadata.co.id/datapublish/2023/11/30/ini-kenaikan-harga-rumah-seken-jabodetabek-oktober-2023-bekasi-tertinggi
+4. dataset bekasi forecast = https://www.kaggle.com/datasets/achmadhendy/bekasi-weather-forecast-from-7timer/
