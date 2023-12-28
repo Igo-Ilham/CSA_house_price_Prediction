@@ -1,28 +1,46 @@
 # import package
 import pickle
 import streamlit as st
+import numpy as np
+import pandas as pd
 
 # loading model
 house_price_predict_model = pickle.load(open('house_price_prediction.sav','rb'))
 
 # Title apps
-st.title('House Prediction')
+st.title('Prediksi Harga Rumah')
 
 # input user
-LB = st.text_input('Masukan Luas Bangunan')
-LT = st.text_input('Masukan Luas Tanah')
-KT = st.text_input('Masukan  Jumlah Kamar Tidur')
-KM = st.text_input('Masukan  Jumlah Kamar Mandi')
-GRS = st.text_input('Masukan Jumlah Garasi')
+col1, col2 = st.columns(2)
 
-# prediction
-house_price_predict = ''
+LB = col1.number_input(label = 'Masukan Luas Bangunan', min_value=0)
+LT = col2.number_input(label = 'Masukan Luas Tanah', min_value=0)
+KT = col1.number_input(label = 'Masukan  Jumlah Kamar Tidur', min_value=0)
+KM = col2.number_input(label = 'Masukan  Jumlah Kamar Mandi', min_value=0)
+GRS = col1.number_input(label = 'Masukan Jumlah Garasi', min_value=0)
 
-# button
-if st.button('Prediksi Harga'):
-    house_price = house_price_predict_model.predict([[LB, LT, KT, KM, GRS]])
 
-# function
-    if(house_price[0] == 1):
-        house_price_predict = 'test'
-    st.success
+# load the train model
+with open('house_price_prediction.sav', 'rb') as rf:
+    model = pickle.load(rf)
+
+def predict(LB, LT, KT, KM, GRS):
+    
+    # processing user input
+    lists = [LB, LT, KT, KM, GRS]
+    
+    df = pd.DataFrame(lists).transpose()
+    # making predictions using the train model
+    prediction = model.predict(df)
+    result = int(prediction)
+    return result
+
+#prediction
+button = st.button('Predict')
+    
+# if button is pressed
+if button:
+# make prediction
+    result = predict(LB, LT, KT, KM, GRS)
+    st.success(f'Harga rumahnya sebesar Rp. {result*1000000}')
+
