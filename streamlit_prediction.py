@@ -36,7 +36,7 @@ def predict(LB, LT, KT, KM, GRS):
     return result
 
 #prediction
-button = st.button('Predict')
+button = st.button('Prediksi')
     
 # if button is pressed
 if button:
