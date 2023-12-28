@@ -1,2 +1,2 @@
 # Final_Project_CSA
-Rencana Final Project untuk Program Bootcamp Data Science di Coding Studio Academy 
+Pembuatan aplikasi prediksi harga rumah dengan multiple linear regresion
