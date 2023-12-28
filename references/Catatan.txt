@@ -1,7 +1,0 @@
-Daftar Dataset untuk Machine Learning Projects
-
-1. Kaggle                        : https://www.kaggle.com/datasets
-2. UCI Machine Learning          : https://archive.ics.uci.edu/
-3. Google Dataset	               : https://datasetsearch.research.google.com/
-4. Jabar Digital Service         : https://digitalservice.jabarprov.go.id/
-5. BPS Indonesia	               : https://www.bps.go.id/id
