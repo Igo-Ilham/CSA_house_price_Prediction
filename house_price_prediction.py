@@ -3,19 +3,8 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as numpy
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.svm import SVR
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.linear_model import LinearRegression, Lasso, ElasticNet
-from sklearn.model_selection import KFold, cross_val_score, train_test_split
-from sklearn.pipeline import Pipeline
-import bz2
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split, KFold, cross_val_score
-from sklearn.model_selection import GridSearchCV
+import sklearn
+
 
 # loading model
 house_price_predict_model = pickle.load(open('house_price_prediction.sav','rb'))
