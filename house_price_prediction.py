@@ -42,7 +42,7 @@ if (selected == "Analysis"):
     st.text("")
     st.caption("**Dataset Harga Rumah :**")
     # import dataset
-    data = pd.read_csv("C:\\Users\\SIBGALAH ILHAM\\Downloads\\CSA_house_price_Prediction\\Harga_Rumah.csv")
+    data = pd.read_csv("Harga_Rumah.csv")
     st.dataframe(data, width=800)
     
     st.write("Penjelasan keterangan setiap kolom :")
