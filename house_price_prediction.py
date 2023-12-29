@@ -14,6 +14,54 @@ with st.sidebar:
     default_index=0)
 
 # navigation with sidebar
+
+if (selected == "Analysis"):
+    st.header("Exploratory Data Analysis (EDA)")
+    
+    st.subheader('**1. Pendahuluan Umum :**')
+    multi_line1 = '''"Dalam rangka menghadirkan analisis data yang komprehensif, kita akan memulai dengan menjelajahi dataset yang telah dikumpulkan. 
+    Dataset ini merupakan kumpulan data yang relevan dengan tujuan proyek data science kita."'''
+    st.markdown(f'<div style="text-align: justify;">{multi_line1}</div>', unsafe_allow_html=True)
+    
+    st.subheader('**2. Deskripsi Dataset :**')
+    multi_line2 = '''Sebelum kita memasuki tahap analisis, mari kita terlebih dahulu memahami struktur dan karakteristik dari dataset yang akan kita gunakan.
+    Dataset ini mencakup informasi seputar data ukuruan luas tanah, luas bangunan, jumlah kamar tidur, jumlah kamar mandi & garasi yang diharapkan dapat memberikan inshigt untuk melakukan pembuatan model prediksi."'''
+    st.markdown(f'<div style="text-align: justify;">{multi_line2}</div>', unsafe_allow_html=True)
+    
+    st.subheader('**3. Tujuan Analisis :**')
+    multi_line3 = '''"Analisis data yang efektif dimulai dengan pemahaman yang mendalam terhadap dataset. Dalam konteks ini, 
+    kita akan menyelidiki dataset ini untuk melakukan suatu prediksi terhadap harga sebuah rumah dengan spesifikasi tertentu."'''
+    st.markdown(f'<div style="text-align: justify;">{multi_line3}</div>', unsafe_allow_html=True)
+
+    st.subheader('**4. Sumber Data :**')
+    multi_line4 = '''""Dataset yang digunakan dalam proyek ini diperoleh dari situs Kaggle.com pada link = https://www.kaggle.com/datasets/wisnuanggara/daftar-harga-rumah. 
+    Keterpahaman terhadap sumber data sangat penting untuk memastikan validitas dan relevansi analisis yang akan kita lakukan."'''
+    st.markdown(f'<div style="text-align: justify;">{multi_line4}</div>', unsafe_allow_html=True)
+    
+    st.text("")
+    st.caption("**Dataset Harga Rumah :**")
+    # import dataset
+    data = pd.read_csv("C:\\Users\\SIBGALAH ILHAM\\Downloads\\CSA_house_price_Prediction\\Harga_Rumah.csv")
+    st.dataframe(data, width=800)
+    
+    st.write("Penjelasan keterangan setiap kolom :")
+    st.markdown("- LB = Luas Bangunan")
+    st.markdown("- LT = Luas Tanah")
+    st.markdown("- KT = Kamar Tidur")
+    st.markdown("- KM = Kamar Mandi")
+    st.markdown("- GRS = Garasi")
+    
+    st.markdown('''
+    <style>
+    [data-testid="stMarkdownContainer"] ul{
+        padding-left:20px;
+    }
+    </style>
+    ''', unsafe_allow_html=True)
+
+    st.markdown("***Melakukan Pengecekan shape terhadap dataset***")
+    st.image("C:\\Users\\SIBGALAH ILHAM\\Downloads\\CSA_house_price_Prediction\\Resources\\raw data\\1.JPEG", caption='Shape Data')
+    
 if (selected == "Prediction"):
     
     # loading model
