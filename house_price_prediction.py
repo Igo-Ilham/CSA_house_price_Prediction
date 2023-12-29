@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as numpy
 import streamlit as st
 from streamlit_option_menu import option_menu
+from PIL import Image
 
 
 # making sidebar
@@ -59,8 +60,13 @@ if (selected == "Analysis"):
     </style>
     ''', unsafe_allow_html=True)
 
-    st.markdown("***Melakukan Pengecekan shape terhadap dataset***")
-    st.image("C:\\Users\\SIBGALAH ILHAM\\Downloads\\CSA_house_price_Prediction\\Resources\\raw data\\1.JPEG", caption='Shape Data')
+    st.markdown("***Melakukan perbandingan harga dengan beberapa atribut feature***")
+    img = Image.open("C:\\Users\\SIBGALAH ILHAM\\Downloads\\CSA_house_price_Prediction\\Resources\\perbandingan.png")
+    st.image(img, caption='visualisasi data dengan regplot')
+    
+    st.markdown("***Melakukan Analisa Univariat terhadap variabel luas tanah***")
+    img = Image.open("C:\\Users\\SIBGALAH ILHAM\\Downloads\\CSA_house_price_Prediction\\Resources\\LT_analisis_univariat.png")
+    st.image(img, caption='visualisasi dengan kde dan boxplot')
     
 if (selected == "Prediction"):
     
