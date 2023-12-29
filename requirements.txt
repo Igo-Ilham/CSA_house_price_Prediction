@@ -6,5 +6,5 @@ matplotlib==3.8.2
 seaborn==0.13.0
 scipy==1.11.4
 streamlit==1.29.0
-streamlit-option-menu==0.3.6
+streamlit-option-menu
 scikit-learn
