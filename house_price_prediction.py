@@ -61,7 +61,7 @@ if (selected == "Analysis"):
     ''', unsafe_allow_html=True)
 
     st.markdown("***Melakukan perbandingan harga dengan beberapa atribut feature***")
-    img = Image.open("C:\\Users\\SIBGALAH ILHAM\\Downloads\\CSA_house_price_Prediction\\Resources\\perbandingan.png")
+    img = Image.open("Resources/perbandingan.png")
     st.image(img, caption='visualisasi data dengan regplot')
     
     st.markdown("***Melakukan Analisa Univariat terhadap variabel luas tanah***")
