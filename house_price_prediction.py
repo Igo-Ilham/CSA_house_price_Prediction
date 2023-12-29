@@ -65,7 +65,7 @@ if (selected == "Analysis"):
     st.image(img, caption='visualisasi data dengan regplot')
     
     st.markdown("***Melakukan Analisa Univariat terhadap variabel luas tanah***")
-    img = Image.open("C:\\Users\\SIBGALAH ILHAM\\Downloads\\CSA_house_price_Prediction\\Resources\\LT_analisis_univariat.png")
+    img = Image.open("Resources/LT_analisis_univariat.png")
     st.image(img, caption='visualisasi dengan kde dan boxplot')
     
 if (selected == "Prediction"):
