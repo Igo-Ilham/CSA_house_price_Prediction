@@ -15,6 +15,39 @@ with st.sidebar:
     default_index=0)
 
 # navigation with sidebar
+if (selected == "About Project"):
+    st.title("House Price Prediction with machine learning")
+    
+    st.text("")
+    st.subheader("Problem Statement")
+    multi_line5 = '''Berdasarkan data pada Badan Pusat Statistik (BPS) dalam Survei Sosial Ekonomi (Susenas) Tahun 2023 mencatat kesenjangan
+    angka kebutuhan rumah (backlog) kepemilikan rumah sepanjang tahun 2023 turun menjadi 9,9 juta unit dari tahun sebelumnya yaitu 10,5 juta unit.
+    Angka backlog kelayakan hunian juga mengalami penurunan signifikan dari 16,14 juta unit (2022) menjadi 14,84 juta unit pada tahun 2023. 
+    Tren angka backlog kepemilikan rumah terus mengalami penurunan dari 12,75 juta unit pada tahun 2020 menjadi 12,72 unit di 2021.
+    Angkanya berkurang lagi menjadi 10,51 juta unit pada tahun 2022 dan menjadi 9,95 juta unit di tahun 2023,” papar Direktur Jenderal 
+    Perumahan Kementerian Pekerjaan Umum dan Perumahan Rakyat (PUPR), Iwan Suprijanto, dalam paparannya yang dikutip Rabu, 13 Desember 2023.
+    '''
+    st.markdown(f'<div style="text-align: justify;">{multi_line5}</div>', unsafe_allow_html=True)
+    st.text("")
+    img = Image.open("tabel_backlog.png")
+    st.image(img, caption="Tabel backlog perumahan tahun 2023 bersumber dari BPS ")
+    
+    multi_line6 = '''Harga rumah dapat dipengaruhi oleh berbagai faktor seperti lokasi geografis, luas tanah, jumlah kamar, fasilitas di sekitar, dan banyak lagi.
+    Analisis manual terhadap kombinasi variabel-variabel ini menjadi rumit dan sulit dilakukan secara akurat. Dengan memanfaatkan teknik data science, kita
+    dapat mengidentifikasi pola dan hubungan yang kompleks di antara variabel-variabel ini untuk membuat prediksi harga yang lebih tepat.. 
+    '''
+    st.markdown(f'<div style="text-align: justify;">{multi_line6}</div>', unsafe_allow_html=True)
+    
+    st.text("")
+    st.subheader("Tujuan Project")
+    
+    multi_line7 = '''Goals dari project akhir ini yaitu mengembangkan sebuah model machine learning yang dapat melakukan prediksi terhadap sebuah harga properti.
+    Penggunaan teknik machine learning dalam proyek ini memungkinkan pengembangan model prediktif yang dapat "belajar" dari data historis. 
+    Dengan memanfaatkan algoritma-algoritma seperti linear regresi, KNN, serta random forest, kita dapat meningkatkan akurasi prediksi dan menghasilkan model yang mampu 
+    menyesuaikan diri dengan perubahan tren pasar. 
+    '''
+    st.markdown(f'<div style="text-align: justify;">{multi_line7}</div>', unsafe_allow_html=True)
+    
 
 if (selected == "Analysis"):
     st.header("Exploratory Data Analysis (EDA)")
