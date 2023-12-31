@@ -99,7 +99,7 @@ if (selected == "Analytics"):
         st.markdown(f'<div style="text-align: justify;">{multi_line4}</div>', unsafe_allow_html=True)
         
     with tab2:
-        st.caption("Table 3. Deskripsi data")
+        st.caption("Tabel 3. Deskripsi data")
         st.dataframe(pd.read_csv("Resources/raw data/daftar_harga_rumah/analisas_deskriptif.csv"), width=800, hide_index=True)
         
         st.caption("Gambar 1. Data Info")
@@ -138,7 +138,7 @@ if (selected == "Analytics"):
             
         st.caption("Gambar 8. Persebaran data rumah(Pairplot)")
         img = Image.open("Resources/Analisa bivariat antara independent variabel dan dependent variabel.png")
-        st.image(img)
+        st.image(img, width= 800)
         
         
 if (selected == "Prediction"):
