@@ -28,7 +28,7 @@ if (selected == "About Project"):
     '''
     st.markdown(f'<div style="text-align: justify;">{multi_line5}</div>', unsafe_allow_html=True)
     st.text("")
-    img = Image.open("Resources\\tabel_backlog.png")
+    img = Image.open("Resources/tabel_backlog.png")
     st.image(img, caption="Tabel backlog perumahan tahun 2023 bersumber dari BPS ")
     
     multi_line6 = '''Harga rumah dapat dipengaruhi oleh berbagai faktor seperti lokasi geografis, luas tanah, jumlah kamar, fasilitas di sekitar, dan banyak lagi.
