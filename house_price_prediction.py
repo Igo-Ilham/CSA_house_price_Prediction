@@ -138,7 +138,7 @@ if (selected == "Analytics"):
             
         st.caption("Gambar 8. Persebaran data rumah(Pairplot)")
         img = Image.open("Resources/Analisa bivariat antara independent variabel dan dependent variabel.png")
-        st.image(img, width= 800)
+        st.image(img)
         
         
 if (selected == "Prediction"):
