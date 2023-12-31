@@ -100,7 +100,7 @@ if (selected == "Analytics"):
         
     with tab2:
         st.caption("Table 3. Deskripsi data")
-        st.dataframe(pd.read_csv("Resources/raw data/daftar_harga_rumah/analisis_deskriptif.csv"), width=800, hide_index=True)
+        st.dataframe(pd.read_csv("Resources/raw data/daftar_harga_rumah/analisas_deskriptif.csv"), width=800, hide_index=True)
         
         st.caption("Gambar 1. Data Info")
         img = Image.open("Resources/data_info.png")
