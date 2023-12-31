@@ -137,7 +137,7 @@ if (selected == "Analytics"):
             st.image(img, caption='visualisasi dengan line plot dan boxplot')   
             
         st.caption("Gambar 8. Persebaran data rumah(Pairplot)")
-        img = Image.open("Resources\\Analisa bivariat antara independent variabel dan dependent variabel.png")
+        img = Image.open("Resources/Analisa bivariat antara independent variabel dan dependent variabel.png")
         st.image(img)
         
         
