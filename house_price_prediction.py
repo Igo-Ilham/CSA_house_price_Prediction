@@ -72,7 +72,7 @@ if (selected == "Analytics"):
         st.caption("**Dataset Harga Rumah :**")
         # import dataset
         st.caption("Tabel 1. Data sebelum pre processing")
-        data_rumah = pd.read_csv("Resources\\raw data\\daftar_harga_rumah\\data_rumah.csv")
+        data_rumah = pd.read_csv("Resources/raw data/daftar_harga_rumah/data_rumah.csv")
         st.dataframe(data_rumah, hide_index=True)
         st.caption("Tabel 2. Data setelah pre processing")
         data = pd.read_csv("Resources\\raw data\\daftar_harga_rumah\\harga_rumah.csv")
