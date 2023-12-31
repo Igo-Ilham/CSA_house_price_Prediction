@@ -28,7 +28,7 @@ if (selected == "About Project"):
     '''
     st.markdown(f'<div style="text-align: justify;">{multi_line5}</div>', unsafe_allow_html=True)
     st.text("")
-    img = Image.open("tabel_backlog.png")
+    img = Image.open("Resources\\tabel_backlog.png")
     st.image(img, caption="Tabel backlog perumahan tahun 2023 bersumber dari BPS ")
     
     multi_line6 = '''Harga rumah dapat dipengaruhi oleh berbagai faktor seperti lokasi geografis, luas tanah, jumlah kamar, fasilitas di sekitar, dan banyak lagi.
@@ -71,9 +71,13 @@ if (selected == "Analytics"):
         st.text("")
         st.caption("**Dataset Harga Rumah :**")
         # import dataset
-        data = pd.read_csv("Harga_Rumah.csv")
-        st.dataframe(data, width=800)
-        
+        st.caption("Tabel 1. Data sebelum pre processing")
+        data_rumah = pd.read_csv("Resources\\raw data\\daftar_harga_rumah\\data_rumah.csv")
+        st.dataframe(data_rumah, hide_index=True)
+        st.caption("Tabel 2. Data setelah pre processing")
+        data = pd.read_csv("Resources\\raw data\\daftar_harga_rumah\\harga_rumah.csv")
+        st.dataframe(data, width=800, hide_index=True)
+                
         st.write("Penjelasan keterangan setiap kolom :")
         st.markdown("- LB = Luas Bangunan")
         st.markdown("- LT = Luas Tanah")
@@ -95,16 +99,48 @@ if (selected == "Analytics"):
         st.markdown(f'<div style="text-align: justify;">{multi_line4}</div>', unsafe_allow_html=True)
         
     with tab2:
-        col3, col4 = st.columns(2)
+        st.caption("Table 3. Deskripsi data")
+        st.dataframe(pd.read_csv("Resources\\raw data\\daftar_harga_rumah\\analisas_deskriptif.csv"), width=800, hide_index=True)
         
-        st.markdown("***Melakukan perbandingan harga dengan beberapa atribut feature***")
+        st.caption("Gambar 1. Data Info")
+        img = Image.open("Resources\\data_info.png")
+        st.image(img, caption='Pengecekan tipe data dan nilai null pada data')
+        
+        st.caption("Gambar 2. Perbandingan harga dengan beberapa atribut feature")
         img = Image.open("Resources/perbandingan.png")
         st.image(img, caption='visualisasi data dengan regplot')
-                
-        st.markdown("***Melakukan Analisa Univariat terhadap variabel luas tanah***")
-        img = Image.open("Resources/LT_analisis_univariat.png")
-        st.image(img, caption='visualisasi dengan kde dan boxplot')
-    
+        
+        col3, col4 = st.columns(2)        
+        with col3:
+            st.caption("Gambar 3. Analisa Univariat terhadap variabel luas tanah")
+            img = Image.open("Resources/LT_analisis_univariat.png")
+            st.image(img, caption='visualisasi dengan line plot dan boxplot')
+        with col4:
+            st.caption("Gambar 4. Analisa Univariat terhadap variabel luas bangunan")
+            img = Image.open("Resources/LB_analisis_univariat.png")
+            st.image(img, caption='visualisasi dengan line plot dan boxplot')
+        
+        col5, col6 = st.columns(2)
+        with col5:
+            st.caption("Gambar 5. Analisa Univariat terhadap variabel jumlah kamar tidur")
+            img = Image.open("Resources/KT_analisis_univariat.png")
+            st.image(img, caption='visualisasi dengan line plot dan boxplot')
+        with col6:
+            st.caption("Gambar 6. Analisa Univariat terhadap variabel jumlah kamar mandi")
+            img = Image.open("Resources/KM_analisis_univariat.png")
+            st.image(img, caption='visualisasi dengan line plot dan boxplot')
+        
+        col7, col8 = st.columns(2)
+        with col7:
+            st.caption("Gambar 7. Analisa Univariat terhadap variabel jumlah garasi")
+            img = Image.open("Resources/GRS_analisis_univariat.png")
+            st.image(img, caption='visualisasi dengan line plot dan boxplot')   
+            
+        st.caption("Gambar 8. Persebaran data rumah(Pairplot)")
+        img = Image.open("Resources\\Analisa bivariat antara independent variabel dan dependent variabel.png")
+        st.image(img)
+        
+        
 if (selected == "Prediction"):
     
     # loading model
