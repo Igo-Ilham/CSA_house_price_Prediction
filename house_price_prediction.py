@@ -75,7 +75,7 @@ if (selected == "Analytics"):
         data_rumah = pd.read_csv("Resources/raw data/daftar_harga_rumah/data_rumah.csv")
         st.dataframe(data_rumah, hide_index=True)
         st.caption("Tabel 2. Data setelah pre processing")
-        data = pd.read_csv("Resources\\raw data\\daftar_harga_rumah\\harga_rumah.csv")
+        data = pd.read_csv("Resources/raw data/daftar_harga_rumah/harga_rumah.csv")
         st.dataframe(data, width=800, hide_index=True)
                 
         st.write("Penjelasan keterangan setiap kolom :")
@@ -100,10 +100,10 @@ if (selected == "Analytics"):
         
     with tab2:
         st.caption("Table 3. Deskripsi data")
-        st.dataframe(pd.read_csv("Resources\\raw data\\daftar_harga_rumah\\analisas_deskriptif.csv"), width=800, hide_index=True)
+        st.dataframe(pd.read_csv("Resources/raw data/daftar_harga_rumah/analisis_deskriptif.csv"), width=800, hide_index=True)
         
         st.caption("Gambar 1. Data Info")
-        img = Image.open("Resources\\data_info.png")
+        img = Image.open("Resources/data_info.png")
         st.image(img, caption='Pengecekan tipe data dan nilai null pada data')
         
         st.caption("Gambar 2. Perbandingan harga dengan beberapa atribut feature")
