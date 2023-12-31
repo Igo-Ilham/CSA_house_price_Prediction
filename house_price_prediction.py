@@ -46,7 +46,7 @@ if (selected == "About Project"):
     menyesuaikan diri dengan perubahan tren pasar. 
     '''
     st.markdown(f'<div style="text-align: justify;">{multi_line7}</div>', unsafe_allow_html=True)
-    
+
 if (selected == "Analytics"):
     tab1, tab2 = st.tabs(["Introduction","Visualization"])
     
@@ -124,23 +124,22 @@ if (selected == "Analytics"):
         with col5:
             st.caption("Gambar 5. Analisa Univariat terhadap variabel jumlah kamar tidur")
             img = Image.open("Resources/KT_analisis_univariat.png")
-            st.image(img, caption='visualisasi dengan line plot dan boxplot')
+            st.image(img, caption='visualisasi dengan bar plot dan boxplot')
         with col6:
             st.caption("Gambar 6. Analisa Univariat terhadap variabel jumlah kamar mandi")
             img = Image.open("Resources/KM_analisis_univariat.png")
-            st.image(img, caption='visualisasi dengan line plot dan boxplot')
+            st.image(img, caption='visualisasi dengan bar plot dan boxplot')
         
         col7, col8 = st.columns(2)
         with col7:
             st.caption("Gambar 7. Analisa Univariat terhadap variabel jumlah garasi")
             img = Image.open("Resources/GRS_analisis_univariat.png")
-            st.image(img, caption='visualisasi dengan line plot dan boxplot')   
+            st.image(img, caption='visualisasi dengan bar plot dan boxplot')   
             
         st.caption("Gambar 8. Persebaran data rumah(Pairplot)")
         img = Image.open("Resources/Analisa bivariat antara independent variabel dan dependent variabel.png")
         st.image(img)
-        
-        
+
 if (selected == "Prediction"):
     
     # loading model
@@ -182,4 +181,3 @@ if (selected == "Prediction"):
     # make prediction
         result = predict(LB, LT, KT, KM, GRS)
         st.success(f'Harga rumahnya sebesar Rp. {result*1000000}')
-
